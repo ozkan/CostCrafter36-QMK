@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_COLEMAK] = LAYOUT(
     TR_Q,          TR_W,          TR_F,          TR_P,     TR_G,               TR_J,  TR_L,  TR_U,             TR_Y,            KC_BSPC,  
     TR_A,          TR_R,          TR_S,          ARROW_T,  TR_D,               TR_H,  TR_N,  TR_E,             TR_IDOT,         TR_O,      
-    LALT_T(TR_Z),  LCTL_T(TR_X),  LSFT_T(TR_C),  TR_V,     TR_B,               TR_K,  TR_M,  RSFT_T(TR_COMM),  RCTL_T(TR_DOT),  TR_SLSH,   
+    LALT_T(TR_Z),  LCTL_T(TR_X),  LSFT_T(TR_C),  TR_V,     TR_B,               TR_K,  TR_M,  RSFT_T(TR_COMM),  RCTL_T(TR_DOT),  LALT_T(KC_PSLS),
                                KC_LALT,   LOWER,    FNL_ENT,   FNR_SPC,   RAISE,   KC_RGUI
   ),
 
@@ -245,3 +245,32 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
+
+enum combos {
+  ESC,
+  DEL,
+  LGUI,
+  RGUI,
+  ENT,
+  CAPS,
+};
+
+
+const uint16_t PROGMEM c_esc[] = {TR_W, TR_F, COMBO_END};
+const uint16_t PROGMEM c_del[] = {TR_U, TR_Y, COMBO_END};
+const uint16_t PROGMEM c_lcmd[] = {TR_R, TR_S, COMBO_END};
+const uint16_t PROGMEM c_rcmd[] = {TR_E, TR_IDOT, COMBO_END};
+const uint16_t PROGMEM c_enter[] = {TR_N, TR_E, COMBO_END};
+const uint16_t PROGMEM c_caps[] = {TR_V, TR_B, COMBO_END};
+
+
+combo_t key_combos[] = {
+  [ESC]  = COMBO(c_esc, KC_ESC),
+  [DEL]  = COMBO(c_del, KC_DEL),
+  [LGUI] = COMBO(c_lcmd, KC_LGUI),
+  [RGUI] = COMBO(c_rcmd, KC_LGUI),
+  [ENT]  = COMBO(c_enter, KC_ENT),
+  [CAPS] = COMBO(c_caps, KC_CAPS),
+};
+
+

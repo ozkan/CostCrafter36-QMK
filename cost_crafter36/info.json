@@ -11,6 +11,30 @@
     "features": {
         "bootmagic": true
     },
+    "ws2812": {
+        "pin": "GP23",
+        "driver": "vendor"
+    },
+    "rgblight": {
+        "led_count": 1,
+        "hue_steps": 8,
+        "saturation_steps": 8,
+        "brightness_steps": 8,
+        "max_brightness": 255,
+        "sleep": true,
+        "animations": {
+                "alternating": true,
+                "breathing": true,
+                "christmas": true,
+                "knight": true,
+                "rainbow_mood": true,
+                "rainbow_swirl": true,
+                "rgb_test": true,
+                "snake": true,
+                "static_gradient": true,
+                "twinkle": true
+            }
+    },
     "matrix_pins": {
         "cols": ["GP3", "GP1", "GP0", "GP4", "GP5", "GP10", "GP11", "GP15", "GP14", "GP12"],
         "rows": ["GP28", "GP27", "GP6", "GP7", "GP21", "GP22", "GP9", "GP8"]
