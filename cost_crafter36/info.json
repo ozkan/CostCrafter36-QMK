@@ -12,7 +12,8 @@
         "bootmagic": true
     },
     "matrix_pins": {
-        "cols": ["GP3", "GP1", "GP0", "GP4", "GP5", "GP10", "GP11", "GP15", "GP14", "GP12"],
+        // "cols": ["GP3", "GP1", "GP0", "GP4", "GP5", "GP10", "GP11", "GP15", "GP14", "GP12"],
+        "cols": ["GP12", "GP14", "GP15", "GP11", "GP10", "GP5", "GP4", "GP0", "GP1", "GP3"],
         "rows": ["GP28", "GP27", "GP6", "GP7", "GP21", "GP22", "GP8", "GP9"]
     },
     "diode_direction": "COL2ROW",
