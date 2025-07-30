@@ -1,11 +1,11 @@
 {
-    "keyboard_name": "CostCrafter36",
-    "manufacturer": "ozkan",
-    "url": "",
-    "maintainer": "ozkan",
+    "keyboard_name": "DORUK",
+    "manufacturer": "özkan Çelik",
+    "url": "ozkancelik.com",
+    "maintainer": "[github.com/ozkan]",
     "usb": {
         "vid": "0x3636",
-        "pid": "0x0001",
+        "pid": "0x0002",
         "device_version": "0.5.0"
     },
     "ws2812": {
@@ -33,7 +33,13 @@
             }
         },
     "features": {
-        "bootmagic": true
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "encoder": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true
     },
     "matrix_pins": {
         "cols": ["GP3", "GP1", "GP0", "GP4", "GP5", "GP10", "GP11", "GP15", "GP14", "GP12"],
