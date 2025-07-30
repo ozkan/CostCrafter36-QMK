@@ -3,8 +3,6 @@
     "manufacturer": "özkan Çelik",
     "url": "ozkancelik.com",
     "maintainer": "[github.com/ozkan]",
-    "bootloader": "rp2040",
-    "processor": "RP2040",
     "usb": {
         "vid": "0x3636",
         "pid": "0x0002",
