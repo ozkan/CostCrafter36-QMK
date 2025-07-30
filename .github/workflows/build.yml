@@ -34,11 +34,24 @@ jobs:
           qmk setup --yes --home .
       - name: Prepare qmk_firmware folder
         run: cp -R cost_crafter36/ qmk_firmware/keyboards/
+
+      - name: Prepare vial folder
+        run: cp -R cost_crafter36/ vial-qmk/keyboards/
+
       - name: Build cost_crafter36-keyboard firmware
         working-directory: ./qmk_firmware
         run: qmk compile -kb cost_crafter36 -km default 
       - name: Archive
         uses: actions/upload-artifact@v4
         with:
-          name: cost_crafter36-keyboard
+          name: cost_crafter36-default
           path: qmk_firmware/cost_crafter36_default.uf2
+
+      - name: Build cost_crafter36-keyboard firmware
+        working-directory: ./vial-qmk
+        run: qmk compile -kb cost_crafter36 -km vial
+      - name: Archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: cost_crafter36-vial
+          path: vial-qmk/cost_crafter36_vial.uf2
